@@ -1,0 +1,43 @@
+
+    <div class="copy-right">
+        <p><i class="fa-solid fa-copyright"></i> Copy Right Hassan. <i class="fa-solid fa-heart"></i> Made with by
+            Hassan Saeed.</p>
+
+    </div>
+
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontent = document.getElementsByClassName("tab-content");
+
+    function opentab(tabname) {
+        for (var i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-link");
+        }
+        for (var i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.remove("active-tab");
+        }
+
+        tabname.classList.add("active-link");
+        var correspondingTab = document.getElementById(tabname.getAttribute("data-tab"));
+        correspondingTab.classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidemen = document.getElementById("sidemenu"); // Corrected selector
+
+    function openmenu() {
+        sidemen.style.right = "0"; // Corrected value
+    }
+
+    function closemenu() {
+        sidemen.style.right = "-100%"; // Corrected value to close the menu
+    }
+</script>
+
+
+
+
+</body>
+
+</html>

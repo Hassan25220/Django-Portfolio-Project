@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!------------------------------- Contact Me ------------------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h2 class="sub-title">Contact Me</h2>
+                <p><i class="fa-solid fa-paper-plane"></i>hassan.saeed2522@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>03044175122</p>
+                <div class="social-icon">
+                    <a href="https://www.linkedin.com/in/hassan-saeed25" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/Hassan25220" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                </div>
+                <a href="./resume/Hassan_Software_Resume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form method="POST" action="{% url 'submitform' %}">
+                    {% comment %} Sirf post Method csfr mangta hai {% endcomment %}
+                    {% csrf_token %}  
+                    {{form}} 
+                    {% comment %} <div>
+                        <input type="text" name="num1" placeholder="Enter number" value="{{ num1|default_if_none:'' }}">
+                    </div>
+                    <div>
+                        <input type="text" name="num2" placeholder="Enter second number" value="{{ num2|default_if_none:'' }}">
+                    </div> {% endcomment %}
+                    <div>
+                        <button type="submit" style="font-size: 16px;">Submit</button>
+                    </div>
+                    <div>
+                        <input type="text" name="output" value="{{ data }}" readonly>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

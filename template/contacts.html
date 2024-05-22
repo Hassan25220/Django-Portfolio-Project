@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!------------------------------- Contact Me ------------------------------------->
+    <div id="contact">
+        <div class="contanier">
+            <div class="row">
+                <div class="contact-left">
+                    <h2 class="sub-title">Conatct Me</h2>
+                    <p><i class="fa-solid fa-paper-plane"></i>hassan.saeed2522@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>03044175122</p>
+                    <div class="social-icon">
+                        <a href="https://www.linkedin.com/in/hassan-saeed25" target="_blank"><i
+                                class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/Hassan25220" target="_blank"><i class='bx bxl-github'></i></a>
+                        <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                    <a href="./resume/Hassan_Software_Resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" Name="Name" placeholder="Your Name" required>
+                        <input type="email" Name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+    
+        </div>
+    {% endblock %}

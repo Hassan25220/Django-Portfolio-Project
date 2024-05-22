@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hassan Portfoloio Website</title>
+    <link rel="stylesheet" href="/static/page.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/56a616d584.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="headtxt">
+        <p class="firstline">
+            <b> Personal Portfolio Website </b>
+        </p>
+    </div>
+    <div id="header">
+        <nav>
+            <img src="{% static 'Images/logo.png' %}" class="logo">
+            <ul class="sidemenu" id="sidemenu">
+                {% comment %} {{request.path}} {% endcomment %}
+                <li class="{% if request.path == '/' %} active {% endif %}"><a href="{% url 'home' %}">Home</a></li>
+                <li class="{% if request.path == '/about-us' %} active {% endif %}"><a href="{% url 'about' %}">About</a></li>
+                <li class="{% if request.path == '/' %} active {% endif %}"><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'projects' %}">Projects</a></li>
+                <li><a href="{% url 'contacts' %}">Contact Me</a></li>
+                <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+
+    </div>

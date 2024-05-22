@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even | Odd</title>
+</head>
+
+<body>
+    <div>
+        <h1 style="text-align: center; background-color: aqua; " class="form-control">Even | Odd Program</h1>
+    </div>
+    <br>
+    <div class="cal_form">
+        <form method="POST">
+            {% csrf_token %}
+            <label for="" style="margin-left: 20px;">Value 1: </label>
+            <input type="text" name="num1" style="width: 50%; margin-left: 12vh;" value="{{n1}}">
+            <br><br>
+            <button type="submit" style="font-weight: bold; margin-left: 12vh; font-size: 20px; background-color: #DC143C; padding: 5px 5px 5px 5px; color: white;">Check</button>
+            <br><br>
+            <label style="margin-left: 20px;">Output:</label>
+
+            <input type="text" name="output" style="width: 50%; margin-left: 12vh;" value="{{output}}">
+        </form>
+    </div>
+
+</body>
+
+</html>
+{% endblock %}

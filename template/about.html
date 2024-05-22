@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+    <!----------------- About Section --------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/static//Portfolio/Images/about-me-img.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h2 class="sub-title">About Me</h2>
+                    <p>
+                        Hello! I'm a <span> Hassan </span> professional with a passion for digital landscapes. My skill
+                        set
+                        encompasses the art of SEO to enhance online visibility, crafting compelling content that
+                        engages and informs, along with crafting seamless web experiences. Moreover, I delve into the
+                        realm of app development, proficiently creating for both Android and iOS platforms.
+
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(this)" data-tab="skills">Skills</p>
+                        <p class="tab-links" onclick="opentab(this)" data-tab="experience">Experience</p>
+                        <p class="tab-links" onclick="opentab(this)" data-tab="education">Education</p>
+
+                    </div>
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>Search Engine Optimization & Content Writter</span><br>Profficient in SEO
+                                (including:
+                                On-page, Off-page, Technicle, etc) & All Types of Content Writing</li>
+                            <li><span>Web-Development / Wordpress Developer</span><br>Web App Development</li>
+                            <li><span>App Developer</span><br>Building Android / IOS Apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>2020 - Current</span><br>-Software Engineering - From - University of Central
+                                Punjab</li>
+                            <li><span>2018 - 2020</span><br>FSC (Pre Engineering)</li>
+                            <li><span>2016 - 2018</span><br>Matric (Science)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="experience">
+                        <ul>
+                            <li><span>August 2020 - November 2020</span><br>Internship & Work Experience -From- Blue
+                                Digital Pixel</li>
+                            <li><span>July 2022 - Nov 2022</span><br>Web Development -From- University of Central Punjab
+                            </li>
+                            <li><span>Jan 2023 - July 2023</span><br>App Development -From- University of Central Punjab
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ {% endblock %}

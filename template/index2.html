@@ -1,0 +1,91 @@
+<html lang="en">
+
+<head>
+    <title>{{title}}</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            left: 0;
+            top: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+
+        li a:hover {
+            background-color: #111;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">About-Us</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+
+    </div>
+    <h1 style="text-align: center;">{{bdata}}</h1>
+    <h1>Meet Commerce</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit facilis corporis, veniam minima dolores hic
+        exercitationem quod ea? Est magni odio tempora? Vero aperiam accusamus enim ea perspiciatis fuga earum iure at
+        quis molestiae odio a doloribus, nisi aspernatur repellendus quod blanditiis facilis.</p>
+
+    <!-- <div> -->
+    <!-- {% for i in clist %}   -->
+    <!-- <div>{{i}}</div> -->
+    <!-- <div>{{forloop.counter}} {{i}}</div>    this for loop is show number starting from 1 -->
+    <!-- <div>{{forloop.counter0}} {{i}}</div>  this for loop is show number starting from 0 -->
+    <!-- <div>{{forloop.revcounter0}} {{i}}</div>  this for loop is show reverse numbering starting from 0 -->
+    <!-- <div>{{forloop.revcounter}} {{i}}</div>  this for loop is show reverse numbering starting from 1 -->
+    <!-- <div>{{forloop.first}} {{i}}</div>
+        <div>{{forloop.last}} {{i}}</div>
+        {% endfor %} -->
+    <!-- </div> -->
+    <br>
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>Name</td>
+            <td>Phane Number</td>
+        </tr>
+        {% for d in student_details %}
+        <tr>
+            <td>{{d.name}}</td>
+            <td>{{d.phone}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% if number|length > 0 %}
+
+     {% for i in number %}
+        {% if i >= 20 %}
+        <div>{{i}}</div>
+        {% endif %}
+     {% endfor %}
+    {% else %}
+        No Data Found
+
+    {% endif %}
+</body>
+
+</html>
